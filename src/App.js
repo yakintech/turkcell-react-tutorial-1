@@ -12,6 +12,8 @@ import AddCustomer from "./pages/AddCustomer";
 import CustomerUpdate from "./pages/CustomerUpdate";
 import ProductsList from "./pages/ProductsList";
 import ProductDetail from "./pages/ProductDetail";
+import Categories from "./tanstack-query-sample/Categories";
+import AddCategory from "./tanstack-query-sample/AddCategory";
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
       <li><Link to="/statearraysample">State Array</Link></li>
       <li><Link to="/products">Products</Link></li>
       <li><Link to="/customers">Customers</Link></li>
+      <li><Link to="/categories">Categories</Link></li>
+
 
 
     </ul>
@@ -41,6 +45,9 @@ function App() {
       <Route path="/customers/add" element={<AddCustomer />} />
       <Route path="/customers/edit/:id" element={<CustomerUpdate />} />
       <Route path="/products/:id" element={<ProductDetail />} />
+      <Route path="/categories" element={<Categories />} />
+      <Route path="/categories/add" element={<AddCategory />} />
+
       
 
 

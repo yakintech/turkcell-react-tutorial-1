@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { queryClient } from '..'
 
 function Home() {
 
@@ -22,8 +23,19 @@ function Home() {
     console.log("formData", formData)
   }
 
+
+  const cacheClear = () => {
+    // Invalidate every query in the cache
+    queryClient.invalidateQueries()
+    // Invalidate every query with a key that starts with `categories`
+    // queryClient.invalidateQueries({ queryKey: ['categories'] })
+  }
+
   return <>
 
+    <button onClick={cacheClear}>Clear Cache</button>
+
+    <hr />
     <div>
       <form onSubmit={handleSubmit}>
         <div>
