@@ -11,6 +11,7 @@ import CustomerDetail from "./pages/CustomerDetail";
 import AddCustomer from "./pages/AddCustomer";
 import CustomerUpdate from "./pages/CustomerUpdate";
 import ProductsList from "./pages/ProductsList";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <li><Link to="/products">Products</Link></li>
       <li><Link to="/customers">Customers</Link></li>
 
+
     </ul>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -38,6 +40,8 @@ function App() {
       <Route path="/customers/:id" element={<CustomerDetail />} />
       <Route path="/customers/add" element={<AddCustomer />} />
       <Route path="/customers/edit/:id" element={<CustomerUpdate />} />
+      <Route path="/products/:id" element={<ProductDetail />} />
+      
 
 
 
