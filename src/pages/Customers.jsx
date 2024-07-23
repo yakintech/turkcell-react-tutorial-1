@@ -46,16 +46,19 @@ function Customers() {
                         <th>Contact Name</th>
                         <th>Contact Title</th>
                         <th>Delete</th>
+                        <th>Update</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        customers && customers.map(item => <tr>
+                        customers && customers.map(item => <tr key={item.id}>
                             <td><Link to={`/customers/${item.id}`}>{item.id}</Link></td>
                             <td>{item.companyName}</td>
                             <td>{item.contactName}</td>
                             <td>{item.contactTitle}</td>
                             <td><button onClick={() => deleteCustomer(item.id)}>Delete</button></td>
+                            <td><Link to={"/customers/edit/" + item.id}>Update</Link></td>
                         </tr>)
                     }
                 </tbody>

@@ -11,8 +11,11 @@ import Products from "./stateSample/Products";
 import Customers from "./pages/Customers";
 import CustomerDetail from "./pages/CustomerDetail";
 import AddCustomer from "./pages/AddCustomer";
+import CustomerUpdate from "./pages/CustomerUpdate";
+import KeyErrorSample from "./pages/KeyErrorSample";
 
 function App() {
+
 
   return <>
     <ul style={{ display: "flex", justifyContent: "space-between" }}>
@@ -36,6 +39,8 @@ function App() {
       <Route path="/customers" element={<Customers />} />
       <Route path="/customers/:id" element={<CustomerDetail />} />
       <Route path="/customers/add" element={<AddCustomer />} />
+      <Route path="/customers/edit/:id" element={<CustomerUpdate />} />
+
 
 
       <Route path="*" element={<NotFound />} />
