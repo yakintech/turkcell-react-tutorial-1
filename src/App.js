@@ -8,6 +8,7 @@ import SupplierDetail from "./pages/SupplierDetail";
 import StateIntro from "./stateSample/StateIntro";
 import StateArraySample from "./stateSample/StateArraySample";
 import Products from "./stateSample/Products";
+import Customers from "./pages/Customers";
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
       <li><Link to="/suppliers">Suppliers</Link></li>
       <li><Link to="/statearraysample">State Array</Link></li>
       <li><Link to="/products">Products</Link></li>
+      <li><Link to="/customers">Customers</Link></li>
+
     </ul>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -28,6 +31,7 @@ function App() {
       <Route path="/suppliers/:id" element={<SupplierDetail />} />
       <Route path="/statearraysample" element={<StateArraySample />} />
       <Route path="/products" element={<Products />} />
+      <Route path="/customers" element={<Customers />} />
       <Route path="*" element={<NotFound/>}/>
     </Routes>
     <p>Site Footer</p>
