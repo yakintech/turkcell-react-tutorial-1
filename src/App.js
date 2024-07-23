@@ -9,11 +9,13 @@ import StateIntro from "./stateSample/StateIntro";
 import StateArraySample from "./stateSample/StateArraySample";
 import Products from "./stateSample/Products";
 import Customers from "./pages/Customers";
+import CustomerDetail from "./pages/CustomerDetail";
+import AddCustomer from "./pages/AddCustomer";
 
 function App() {
 
   return <>
-    <ul style={{display:"flex", justifyContent:"space-between"}}>
+    <ul style={{ display: "flex", justifyContent: "space-between" }}>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/contact">Contact</Link></li>
       <li><Link to="/about">About</Link></li>
@@ -32,7 +34,11 @@ function App() {
       <Route path="/statearraysample" element={<StateArraySample />} />
       <Route path="/products" element={<Products />} />
       <Route path="/customers" element={<Customers />} />
-      <Route path="*" element={<NotFound/>}/>
+      <Route path="/customers/:id" element={<CustomerDetail />} />
+      <Route path="/customers/add" element={<AddCustomer />} />
+
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
     <p>Site Footer</p>
   </>
