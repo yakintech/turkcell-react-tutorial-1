@@ -14,6 +14,7 @@ import ProductsList from "./pages/ProductsList";
 import ProductDetail from "./pages/ProductDetail";
 import Categories from "./tanstack-query-sample/Categories";
 import AddCategory from "./tanstack-query-sample/AddCategory";
+import Orders from "./swr/Orders";
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
       <li><Link to="/products">Products</Link></li>
       <li><Link to="/customers">Customers</Link></li>
       <li><Link to="/categories">Categories</Link></li>
+      <li><Link to="/orders">Orders</Link></li>
+
 
 
 
@@ -47,6 +50,7 @@ function App() {
       <Route path="/products/:id" element={<ProductDetail />} />
       <Route path="/categories" element={<Categories />} />
       <Route path="/categories/add" element={<AddCategory />} />
+      <Route path="/orders" element={<Orders />} />
 
       
 
