@@ -5,14 +5,12 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Suppliers from "./pages/Suppliers";
 import SupplierDetail from "./pages/SupplierDetail";
-import StateIntro from "./stateSample/StateIntro";
 import StateArraySample from "./stateSample/StateArraySample";
-import Products from "./stateSample/Products";
 import Customers from "./pages/Customers";
 import CustomerDetail from "./pages/CustomerDetail";
 import AddCustomer from "./pages/AddCustomer";
 import CustomerUpdate from "./pages/CustomerUpdate";
-import KeyErrorSample from "./pages/KeyErrorSample";
+import ProductsList from "./pages/ProductsList";
 
 function App() {
 
@@ -35,7 +33,7 @@ function App() {
       <Route path="/suppliers" element={<Suppliers />} />
       <Route path="/suppliers/:id" element={<SupplierDetail />} />
       <Route path="/statearraysample" element={<StateArraySample />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/products" element={<ProductsList />} />
       <Route path="/customers" element={<Customers />} />
       <Route path="/customers/:id" element={<CustomerDetail />} />
       <Route path="/customers/add" element={<AddCustomer />} />
